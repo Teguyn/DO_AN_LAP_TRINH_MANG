@@ -2279,6 +2279,11 @@ body::after {
         grid-template-columns: 1fr;
     }
 
+    .certifications-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+    }
+
     .blog-grid {
         grid-template-columns: 1fr;
     }
@@ -2329,6 +2334,11 @@ body::after {
         width: 200px;
         height: 200px;
         font-size: 80px;
+    }
+
+    .certifications-grid {
+        grid-template-columns: 1fr;
+        gap: 15px;
     }
 }
 
