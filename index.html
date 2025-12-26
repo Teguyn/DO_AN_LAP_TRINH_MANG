@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Blog của dev.Teguyn</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Partials will be injected into these containers -->
+    <div id="header"></div>
+    
+    <!-- Blog Detail View -->
+    <div id="blogDetailView" class="blog-detail-view" style="display:none;">
+        <div class="blog-detail-header">
+            <button id="backToBlog" class="back-button"><i class="fas fa-arrow-left"></i> Quay Lại</button>
+            <div class="blog-detail-category" id="detailCategory"></div>
+        </div>
+        <div class="blog-detail-container">
+            <div class="blog-detail-content-wrapper">
+                <h1 id="detailTitle"></h1>
+                <div id="detailMeta" class="blog-detail-meta"></div>
+                <div id="detailContent"></div>
+            </div>
+            <div class="blog-detail-footer">
+                <div class="blog-tags" id="blogTags"></div>
+                <div class="blog-share">
+                    <label>Chia sẻ bài viết:</label>
+                    <a href="#" class="share-button share-facebook" data-platform="facebook" title="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="share-button share-twitter" data-platform="twitter" title="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="share-button share-linkedin" data-platform="linkedin" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" class="share-button share-copy" data-platform="copy" title="Copy URL"><i class="fas fa-link"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <section id="home"><div id="hero"></div></section>
+        <section id="about"><div id="about"></div></section>
+        <section id="skills"><div id="skills"></div></section>
+        <section id="projects"><div id="projects"></div></section>
+        <section id="certifications"><div id="certifications"></div></section>
+        <section id="blog"><div id="blog"></div></section>
+        <section id="contact"><div id="contact"></div></section>
+    </main>
+
+    <div id="footer"></div>
+
+    <!-- Certificate Modal -->
+    <div id="certModal" class="cert-modal">
+        <span class="cert-modal-close" onclick="closeCertModal()">&times;</span>
+        <img id="certModalImg" src="" alt="Certificate" class="cert-modal-img" />
+    </div>
+
+    <script src="js/partials-loader.js"></script>
+    <script>
+        // Load partials then load the main script
+        window.loadPartialsAndInit(function(){
+            const s = document.createElement('script');
+            s.src = 'js/script.js';
+            s.defer = true;
+            document.body.appendChild(s);
+        });
+    </script>
+</body>
+
